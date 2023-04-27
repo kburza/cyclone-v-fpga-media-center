@@ -1,0 +1,16 @@
+.\flash\usbhw.o: usbhw.c
+.\flash\usbhw.o: C:\Keil_v5\ARM\INC\NXP\LPC17xx\LPC17xx.h
+.\flash\usbhw.o: C:\Keil_v5\ARM\CMSIS\Include\core_cm3.h
+.\flash\usbhw.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\flash\usbhw.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmInstr.h
+.\flash\usbhw.o: C:\Keil_v5\ARM\CMSIS\Include\core_cmFunc.h
+.\flash\usbhw.o: C:\Keil_v5\ARM\INC\NXP\LPC17xx\system_LPC17xx.h
+.\flash\usbhw.o: type.h
+.\flash\usbhw.o: usb.h
+.\flash\usbhw.o: usbcfg.h
+.\flash\usbhw.o: usbreg.h
+.\flash\usbhw.o: usbhw.h
+.\flash\usbhw.o: usbcore.h
+.\flash\usbhw.o: usbuser.h
+.\flash\usbhw.o: KBD.h
+.\flash\usbhw.o: GLCD.h

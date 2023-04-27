@@ -1,0 +1,28 @@
+--cpu Cortex-M3
+".\objects\core_cm3.o"
+".\objects\blinky.o"
+".\objects\irq.o"
+".\objects\glcd_spi_lpc1700.o"
+".\objects\led.o"
+".\objects\kbd.o"
+".\objects\adcuser.o"
+".\objects\usbcore.o"
+".\objects\usbdesc.o"
+".\objects\usbdmain.o"
+".\objects\usbhw.o"
+".\objects\usbuser.o"
+".\objects\arm_ani_16bpp.o"
+".\objects\bg_16bpp_b.o"
+".\objects\bg_16bpp_l.o"
+".\objects\bg_16bpp_r.o"
+".\objects\bg_16bpp_t.o"
+".\objects\startup_lpc17xx.o"
+".\objects\system_lpc17xx.o"
+".\objects\img1.o"
+".\objects\game.o"
+".\objects\img2.o"
+".\objects\img3.o"
+--library_type=microlib --strict --scatter ".\Objects\Project.sct"
+--summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\Project.map" -o .\Objects\Project.axf

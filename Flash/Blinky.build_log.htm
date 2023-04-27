@@ -1,0 +1,143 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.31.0.0
+Copyright (C) 2020 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: ECBME Dept. Ryerson University Flex license: MDK Professional 5.31 (Flex): 200 user(s) (mdk_pro) Operation stops: 21 Jun 2024
+ 
+Tool Versions:
+Toolchain:       MDK Professional 5.31 (Flex): 200 user(s)  Version: 5.31.0.0
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 6 (build 750)
+Assembler:       Armasm.exe V5.06 update 6 (build 750)
+Linker/Locator:  ArmLink.exe V5.06 update 6 (build 750)
+Library Manager: ArmAr.exe V5.06 update 6 (build 750)
+Hex Converter:   FromElf.exe V5.06 update 6 (build 750)
+CPU DLL:         SARMCM3.DLL V5.31.0.0
+Dialog DLL:      DARMP1.DLL V1.27.0.0
+Target DLL:      UL2CM3.DLL V1.163.4.0
+Dialog DLL:      TARMP1.DLL V1.26.0.0
+ 
+<h2>Project:</h2>
+S:\COE718\Project HOLY\Blinky.uvproj
+Project File Date:  11/10/2022
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'LPC1768 Flash'
+assembling startup_LPC17xx.s...
+compiling system_LPC17xx.c...
+compiling core_cm3.c...
+compiling Blinky.c...
+Blinky.c(90): warning:  #223-D: function "gallery" declared implicitly
+                                         gallery();
+Blinky.c(93): warning:  #223-D: function "speaker_menu" declared implicitly
+                                         speaker_menu();
+Blinky.c(100): warning:  #223-D: function "LCD" declared implicitly
+                         LCD(menu_count);
+Blinky.c(109): warning:  #1294-D: Old-style function LCD
+  int LCD(menu_count) {
+Blinky.c(109): warning:  #1079-D: standard requires that parameter "menu_count"  be given a type by a subsequent declaration ("int" assumed)
+  int LCD(menu_count) {
+Blinky.c(218): warning:  #177-D: variable "js_last_sp"  was declared but never referenced
+                int js_last_sp = 0;
+Blinky.c(219): warning:  #177-D: variable "menu_count_gal"  was declared but never referenced
+                int menu_count_gal = 3;
+Blinky.c: 7 warnings, 0 errors
+compiling IRQ.c...
+compiling GLCD_SPI_LPC1700.c...
+compiling LED.c...
+compiling KBD.c...
+compiling adcuser.c...
+compiling usbcore.c...
+compiling usbdesc.c...
+compiling usbdmain.c...
+usbdmain.c(57): error:  #136: struct "<unnamed>"  has no field "CR"
+    LPC_ADC->CR |= 0x01000000;              /* Start A/D Conversion */
+usbdmain.c(59): error:  #136: struct "<unnamed>"  has no field "GDR"
+      val = LPC_ADC->GDR;                   /* Read A/D Data Register */
+usbdmain.c(61): error:  #136: struct "<unnamed>"  has no field "CR"
+    LPC_ADC->CR &= ~0x01000000;             /* Stop A/D Conversion */
+usbdmain.c(101): error:  #136: struct "<unnamed>"  has no field "CR"
+    LPC_DAC->CR = val & 0xFFC0;             /* Set Speaker Output */
+usbdmain.c(137): error:  #136: struct "<unnamed>"  has no field "CR"
+    LPC_ADC->CR = 0x00200E04;           /* ADC: 10-bit AIN2 @ 4MHz */
+usbdmain.c(138): error:  #136: struct "<unnamed>"  has no field "CR"
+    LPC_DAC->CR = 0x00008000;           /* DAC Output set to Middle Point */
+usbdmain.c: 0 warnings, 6 errors
+compiling usbhw.c...
+usbhw.c(86): error:  #136: struct "<unnamed>"  has no field "DevIntClr"
+    LPC_USB->DevIntClr = CCEMTY_INT;
+usbhw.c(87): error:  #136: struct "<unnamed>"  has no field "CmdCode"
+    LPC_USB->CmdCode = cmd;
+usbhw.c(88): error:  #136: struct "<unnamed>"  has no field "DevIntSt"
+    while ((LPC_USB->DevIntSt & CCEMTY_INT) == 0);
+usbhw.c(101): error:  #136: struct "<unnamed>"  has no field "DevIntClr"
+    LPC_USB->DevIntClr = CCEMTY_INT;
+usbhw.c(102): error:  #136: struct "<unnamed>"  has no field "CmdCode"
+    LPC_USB->CmdCode = cmd;
+usbhw.c(103): error:  #136: struct "<unnamed>"  has no field "DevIntSt"
+    while ((LPC_USB->DevIntSt & CCEMTY_INT) == 0);
+usbhw.c(104): error:  #136: struct "<unnamed>"  has no field "DevIntClr"
+    LPC_USB->DevIntClr = CCEMTY_INT;
+usbhw.c(105): error:  #136: struct "<unnamed>"  has no field "CmdCode"
+    LPC_USB->CmdCode = val;
+usbhw.c(106): error:  #136: struct "<unnamed>"  has no field "DevIntSt"
+    while ((LPC_USB->DevIntSt & CCEMTY_INT) == 0);
+usbhw.c(119): error:  #136: struct "<unnamed>"  has no field "DevIntClr"
+    LPC_USB->DevIntClr = CCEMTY_INT;
+usbhw.c(120): error:  #136: struct "<unnamed>"  has no field "CmdCode"
+    LPC_USB->CmdCode = CMD_SEL_EP(EPAdr(EPNum));
+usbhw.c(121): error:  #136: struct "<unnamed>"  has no field "DevIntSt"
+    while ((LPC_USB->DevIntSt & CCEMTY_INT) == 0);
+usbhw.c(122): error:  #136: struct "<unnamed>"  has no field "DevIntClr"
+    LPC_USB->DevIntClr = CCEMTY_INT;
+usbhw.c(123): error:  #136: struct "<unnamed>"  has no field "CmdCode"
+    LPC_USB->CmdCode = cmd;
+usbhw.c(124): error:  #136: struct "<unnamed>"  has no field "DevIntSt"
+    while ((LPC_USB->DevIntSt & CCEMTY_INT) == 0);
+usbhw.c(136): error:  #136: struct "<unnamed>"  has no field "DevIntClr"
+    LPC_USB->DevIntClr = CCEMTY_INT | CDFULL_INT;
+usbhw.c(137): error:  #136: struct "<unnamed>"  has no field "CmdCode"
+    LPC_USB->CmdCode = cmd;
+usbhw.c(138): error:  #136: struct "<unnamed>"  has no field "DevIntSt"
+    while ((LPC_USB->DevIntSt & CDFULL_INT) == 0);
+usbhw.c(139): error:  #136: struct "<unnamed>"  has no field "CmdData"
+    return (LPC_USB->CmdData);
+usbhw.c(195): error:  #136: struct "<unnamed>"  has no field "EpInd"
+    LPC_USB->EpInd = 0;
+usbhw.c(196): error:  #136: struct "<unnamed>"  has no field "MaxPSize"
+    LPC_USB->MaxPSize = USB_MAX_PACKET0;
+usbhw.c(197): error:  #136: struct "<unnamed>"  has no field "EpInd"
+    LPC_USB->EpInd = 1;
+usbhw.c(198): error:  #136: struct "<unnamed>"  has no field "MaxPSize"
+    LPC_USB->MaxPSize = USB_MAX_PACKET0;
+usbhw.c(199): error:  #136: struct "<unnamed>"  has no field "DevIntSt"
+    while ((LPC_USB->DevIntSt & EP_RLZED_INT) == 0);
+usbhw.c(201): error:  #136: struct "<unnamed>"  has no field "EpIntClr"
+    LPC_USB->EpIntClr  = 0xFFFFFFFF;
+usbhw.c(202): error:  #136: struct "<unnamed>"  has no field "EpIntEn"
+    LPC_USB->EpIntEn   = 0xFFFFFFFF ^ USB_DMA_EP;
+usbhw.c(203): error:  #136: struct "<unnamed>"  has no field "DevIntClr"
+    LPC_USB->DevIntClr = 0xFFFFFFFF;
+usbhw.c(204): error:  #136: struct "<unnamed>"  has no field "DevIntEn"
+    LPC_USB->DevIntEn  = DEV_STAT_INT    | EP_SLOW_INT    |
+usbhw.c(209): error:  #136: struct "<unnamed>"  has no field "UDCAH"
+    LPC_USB->UDCAH   = USB_RAM_ADR;
+usbhw.c(210): error:  #136: struct "<unnamed>"  has no field "DMARClr"
+    LPC_USB->DMARClr = 0xFFFFFFFF;
+usbhw.c: 0 warnings, 30 errors
+compiling usbuser.c...
+compiling Bg_16bpp_t.c...
+compiling Bg_16bpp_l.c...
+compiling Bg_16bpp_r.c...
+compiling Bg_16bpp_b.c...
+compiling ARM_Ani_16bpp.c...
+".\Flash\Blinky.axf" - 36 Error(s), 7 Warning(s).
+Target not created.
+Build Time Elapsed:  00:00:06
+</pre>
+</body>
+</html>

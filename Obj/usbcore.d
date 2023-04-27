@@ -1,0 +1,11 @@
+.\obj\usbcore.o: usbcore.c
+.\obj\usbcore.o: type.h
+.\obj\usbcore.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\usbcore.o: usb.h
+.\obj\usbcore.o: usbcfg.h
+.\obj\usbcore.o: usbhw.h
+.\obj\usbcore.o: usbcore.h
+.\obj\usbcore.o: usbdesc.h
+.\obj\usbcore.o: usbuser.h
+.\obj\usbcore.o: audio.h
+.\obj\usbcore.o: adcuser.h
